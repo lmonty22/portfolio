@@ -3,14 +3,18 @@ import logo from './logo.svg';
 import { Route, Switch, withRouter, Redirect} from "react-router-dom"
 // import {Navbar} from 'react-bootstrap'
 import './App.css';
-import HomeContainer from './containers/HomeContainer';
-import About from './containers/About'
+import Home from './components/Home';
+import About from './components/About'
+import ProjectsContainer from './containers/ProjectsContainer';
+import PhotoCarousel from './components/PhotoCarousel'
 
 function App() {
   return (
     <div className='app'> 
-        <HomeContainer />
+        <Home />
         <About />
+        <PhotoCarousel/>
+        <ProjectsContainer/>
     </div>
   );
 }

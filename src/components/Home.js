@@ -3,7 +3,7 @@ import {Row, Container, Image} from 'react-bootstrap'
 import pool from '../assets/pool.jpg'
 
 
-const HomeContainer = () => {
+const Home = () => {
     return(
         <Container fluid className='splash'>
             <Image src={pool} fluid />
@@ -13,4 +13,4 @@ const HomeContainer = () => {
     )
 }
 
-export default HomeContainer
+export default Home
