@@ -4,6 +4,7 @@ import headshot4 from '../assets/headshot4.png'
 import github from '../assets/github.png'
 import medium from '../assets/Medium-512.webp'
 import linkedin from '../assets/linkedin.png'
+import resume from '../assets/Lindsay Montgomery - Resume.pdf'
 const About = () => {
     return(
         <Container className='about' >
@@ -14,8 +15,10 @@ const About = () => {
                         <div> My name is Lindsay Montgomery. 
                             I'm a Full Stack Developer, Problem Solving Enthusiast, Retired Canadian Olympian and Dog Mom.
                             I recently graduated from the Flatiron School's Immersive Software Engineering Program. 
-                            I'm actively seeking my first web developer role in Washington, DC or remotely. 
+                            I'm actively seeking my first web developer role in Washington, DC or remotely. I have a diverse professional background 
+                            in Tableau, Event Management, Fin-Tech, Sales and the Sports Industry.
                         </div>
+                        <a href={resume} download>Download Resume</a>
                     </Col>
                     <Col className='right-col' >
                         <h1>Technical Skills</h1>
