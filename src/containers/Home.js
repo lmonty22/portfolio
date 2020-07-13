@@ -1,19 +1,17 @@
 import React from 'react'
-import {Row, Container, Image} from 'react-bootstrap'
-import { Slide, Fade } from "react-awesome-reveal";
-import pool from '../assets/pool.jpg'
+import { Container} from 'react-bootstrap'
+import { Fade } from "react-awesome-reveal";
 import PhotoCarousel from '../components/PhotoCarousel'
 
 
 const Home = () => {
     return(
-        <Fade>
-        <Container fluid className={`splash `}>
+        <Container fluid className={`splash `} id='home'>
+             <Fade>
             <PhotoCarousel/>
-            <h1 className='name-header'>Lindsay Montgomery</h1>
-      </Container>
-      </Fade>
-
+            {/* <h1 className='name-header'>Lindsay Montgomery</h1> */}
+            </Fade>
+        </Container>
     )
 }
 

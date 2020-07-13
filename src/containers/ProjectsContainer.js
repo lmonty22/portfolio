@@ -3,7 +3,7 @@ import {Row, Container} from 'react-bootstrap'
 import Project from '../components/Project'
 import brackIt from '../assets/brackIt.png'
 import getTrails from '../assets/getTrails.png'
-import { Slide, Fade } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 const bracktItDescription = 'Tournament Bracket Generator built to help tournament hosts create and manage matchups, record scores and advance teams, while participants can follow along.'
 const getTrailsDescription= 'Search for Trails and keep track of trails you want to hike or have already hiked.'
@@ -20,12 +20,12 @@ const brackItSkills =['Ruby', 'Ruby on Rails', 'Javascript', 'ReactJS', 'Redux',
 const ProjectsContainer = () => {
     return(
         <Fade>
-        <Container fluid className='projects-container '>
+        <Container id='projects' fluid className='projects-container '>
             <h1 >Technical Projects</h1>
-            <div className='project-row'> 
+            <Row className='project-row'> 
                 <Project title={'BrackIt'} skills={brackItSkills} image={brackIt} description={bracktItDescription} link={'https://brackit.netlify.app/'} frontend={brackitFrontend} backend={brackitBackend} loom={brackitLoom}/>
                 <Project title={'getTrails'} skills={hikesSkills} image={getTrails} description={getTrailsDescription} link={'https://get-trails.netlify.app/'} frontend={hikesFrontend} backend={hikesBackend} loom={hikesLoom}/>
-            </div>
+            </Row>
         </Container>
         </Fade>
 

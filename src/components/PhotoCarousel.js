@@ -1,5 +1,5 @@
 import React from 'react'
-import {Row, Container, Image, Carousel} from 'react-bootstrap'
+import { Carousel} from 'react-bootstrap'
 import cinqueTerre from '../assets/cinqueterre.jpeg'
 import olympics from '../assets/olympics.jpg'
 import kayaking from '../assets/kayaking.jpeg'

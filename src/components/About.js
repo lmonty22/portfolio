@@ -1,15 +1,13 @@
 import React from 'react'
 import {Row, Container, Col, Image} from 'react-bootstrap'
 import headshot4 from '../assets/headshot4.png'
-import github from '../assets/github.png'
-import medium from '../assets/Medium-512.webp'
-import linkedin from '../assets/linkedin.png'
+
 import resume from '../assets/Lindsay Montgomery - Resume.pdf'
 import { Fade } from "react-awesome-reveal";
 const About = () => {
     return(
         <Fade>
-        <Container className='about' >
+        <Container id='about' className='about-container' >
                 <h1 >About</h1>
                 <Row className= 'about-row'>
                     <Col className='left-col'  >
@@ -35,12 +33,7 @@ const About = () => {
                         <li>Postgres</li>
                         <li>Tableau</li>
                     </ul> */}
-                <Row>
-                            <a target="_blank" href='https://www.linkedin.com/in/lindsaymontgomery1/'><img src={linkedin} className='icon'></img></a>
-                            <a target='_blank' href='https://github.com/lmonty22' ><img src={github} className='icon'></img> </a>
-                            <a target='_blank' href='https://medium.com/@lmonty22'><img src={medium} className='icon'></img> </a>
-
-                </Row>
+             
                 <Row>
                     <a href={resume} download>Download Resume</a>
                 </Row>

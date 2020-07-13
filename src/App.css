@@ -1,81 +1,73 @@
 
 .app, #root{
-  min-width: 100%;
-  min-height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: #E1E2EF;
 }
-.card{
-  max-width: 600px !important;
+.app{
+  margin-bottom: 50px;
 }
-.card:hover {
-      box-shadow: 8px 12px 31px 8px #7897bb;
-  }
 
 .menu {
   background-color: #E1E2EF !important;
-   z-index: 1000 !important;
-   /* position: sticky !important; */
-   position: fixed;
-   width: 100%
-}
-
-.name-header{
-  position: absolute;
-  z-index: 100;
-  margin: auto;
-  font-family: 'Yellowtail', cursive;
-  color: #E1E2EF;
-  font-size: 85pt;
-}
-
-.splash{
-  width: 100% !important;
-  height: 100% !important;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 50;
-  position: absolute;
-}
-
-
-.carousel {
-  width: 100%;
-  height: 100%;
-  position: fixed !important;
-}
-
+   /* z-index: 1000 !important; */
+   position: sticky !important;
+   /* position: fixed; */
+   width: 100%
+  }
+  
+  .splash{
+    width: 100% !important;
+  }
+     
+        
 .carousel-item, .carousel-image{
-  width: 100%;
-  height: 100%;
-}
+    width: 100%;
+    /* height: 100%; */
+    z-index: 50;
+  }
 
-.bio {
-  font-size: 15pt;
+  .name-header{
+    position: absolute;
+    z-index: 100;
+    margin: auto;
+    font-family: 'Yellowtail', cursive;
+    color: #E1E2EF;
+    font-size: 500%;
+  }
+
+  
+.about-container {
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .about {
-  padding-top: 5%;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
 }
-
-
 
 .headshot{
-  height: 300px;
-  width: 300px;
+  max-height: 50%;
+  max-width: 50%;
+  
 }
+
 .about-row{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+}
+
+.bio {
+  padding: 2%;
 }
 
 .left-col, .right-col{
@@ -87,38 +79,33 @@
   max-width: 500px;
 }
 
+.card{
+  max-width: 500px !important;
+  padding: 2% !important;
+}
+.card:hover {
+      box-shadow: 8px 12px 31px 8px #7897bb;
+    }
+    
+    .blogs-container, .projects-container, .contact-Form {
+      padding-top: 5%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .blogs-row, .project-row{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      text-align: center;
+    }
+
 
 .badge-info {
   background-color: #3A405A !important ;
   color: #E1E2EF !important;
 }
-
-
-.contact-Form {
-  padding-top: 5%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.blogs-container, .projects-container {
-  padding-top: 5%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.blogs-row, .project-row{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-}
-
-
-.center {
-  text-align: center;
-} 
 
 .blog-image{
   max-width: 400px;
@@ -129,23 +116,42 @@
   max-width: 400px;
 }
 
-
-.icon{
-  width: 50px;
-  height: 50px;
-}
 .card-image{
-  height: 350px;
+  max-height: 350px;
+  position: cover;
   
 }
 .card-links{
   display: flex;
   justify-content: space-around;
 }
-.center{
+
+
+.contact-Form{
+  align-items: center;
+}
+
+.form{
+  max-width: 90%;
+  min-width: 70%;
+}
+
+.footer{
+  padding-top: 5%;
   display: flex;
   justify-content: center;
+  flex-direction: row;
 }
+
+.icon{
+  width: 50px;
+  height: 50px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 p, h1, h2, h3, h4, div {
   font-family: 'Rajdhani', sans-serif;
