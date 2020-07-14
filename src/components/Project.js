@@ -1,43 +1,36 @@
 import React from 'react'
 import {Row, Badge} from 'react-bootstrap'
-import { Card,Image,Button} from 'semantic-ui-react'
+import { Card,Image,Button, Modal, Header, Embed} from 'semantic-ui-react'
 
-
-const Project = (props) => {
-    return(
-        <a  target="_blank" href={props.link}>
+class Project extends React.Component {
+ 
+  render() {
+    return (
+        <a target='_blank' href={this.props.project.link}>
         <Card fluid className='card' >
-             <Card.Header style={{fontWeight:'bold'}}><h1>{props.title}</h1>
-             </Card.Header>
+             <Card.Header className='project-header'><Image src={this.props.project.logo}/></Card.Header>
         <Card.Content>
             <Card.Description>
-            <a  target="_blank" href={props.link}><Image variant="top" className='card-image' src={props.image} /></a>
-            <Row>
-                {props.description}
-            </Row>
+           <Image variant="top" className='card-image' src={this.props.project.image} />
             </Card.Description>
         </Card.Content>
             <Card.Content extra>
             <Card.Description>
-            <Row className='card-links'>
-            <a target="_blank" href={props.loom}><Button variant='primary'>Watch Demo </Button></a>
-            <a target='_blank' href={props.backend}><Button variant='primary'>Backend Repo </Button></a>
-            <a target='_blank' href={props.frontend}><Button variant='primary'>Frontend Repo</Button></a>
-            </Row>
+                <div> {this.props.project.description} </div>
             </Card.Description>
             </Card.Content>
-
-        <Card.Content extra>
-            <Row className='card-links'>
-            {props.skills.map(s =><Badge className='badge-info'> {s} </Badge> )}
-            </Row>
-        </Card.Content>
             <Card.Content extra>
-            <a target="_blank" href={props.link}><Button variant='primary'>Check it out!</Button></a>
+                <a target='_blank' href={this.props.project.loom}><Button className='btn-light'>Loom Demo</Button></a>
+                <a target='_blank' href={this.props.project.frontend}><Button className='btn-light'>Frontend Repo</Button></a>
+                <a target='_blank' href={this.props.project.backend}><Button className='btn-light'>Backend Repo</Button></a>
+            </Card.Content>
+            <Card.Content extra>
+                <a target='_blank' href={this.props.project.link}><Button className='btn-primary'>Check it Out!</Button></a>
             </Card.Content>
         </Card>
         </a>
     )
+  }
 }
 
 export default Project

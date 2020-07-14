@@ -1,7 +1,7 @@
 import React from 'react'
 import {Row, Container} from 'react-bootstrap'
 import Blog from '../components/Blog'
-import { Fade } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 
 const Blogs = [{
     title: 'Big O Notation & Avoiding Nested Loops',
@@ -22,16 +22,16 @@ const Blogs = [{
 
 ]
 
-const BlogContainer = () => {
+const BlogContainer = (props) => {
     return(
-        <Fade >
-        <Container id='blogs' fluid className='blogs-container center'>
+        <Slide >
+        <Container id='blogs' fluid  style={{minHeight: props.height(window)}} className='blogs-container center'>
             <h1 >Blogs</h1>
             <Row className='blogs-row'>
-                {Blogs.map( b=>  <Blog blog={b} />)}
+                {Blogs.map( b=> <Blog blog={b} />)}
             </Row>
         </Container>
-        </Fade>
+        </Slide>
     )
 }
 

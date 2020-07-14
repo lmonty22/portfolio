@@ -9,7 +9,7 @@ const Blog = (props) => {
         <Card hoverable className='blog-card' >
              <Card.Img variant="top" className='card-image blog-image' src={props.blog.image} />
         <Card.Body>
-             <Card.Title style={{fontWeight:'bold'}}>{props.blog.title}</Card.Title>
+             <Card.Title className='card-title'style={{fontWeight:'bold'}}>{props.blog.title}</Card.Title>
             <Card.Text>
                 {props.blog.date}
             </Card.Text>

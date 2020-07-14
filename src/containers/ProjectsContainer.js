@@ -3,31 +3,43 @@ import {Row, Container} from 'react-bootstrap'
 import Project from '../components/Project'
 import brackIt from '../assets/brackIt.png'
 import getTrails from '../assets/getTrails.png'
-import { Fade } from "react-awesome-reveal";
+import brackItLogo from '../assets/BrackItLogo.png'
+import getTrailsLogo from '../assets/getTrailsLogo.png'
+import { Slide } from "react-awesome-reveal";
 
-const bracktItDescription = 'Tournament Bracket Generator built to help tournament hosts create and manage matchups, record scores and advance teams, while participants can follow along.'
-const getTrailsDescription= 'Search for Trails and keep track of trails you want to hike or have already hiked.'
-const brackitBackend = 'https://github.com/lmonty22/brackIt-backend'
-const brackitFrontend = 'https://github.com/lmonty22/brackIt-front-end'
-const hikesBackend = 'https://github.com/marykang09/hikes_backend'
-const hikesFrontend = 'https://github.com/marykang09/hikes_frontend'
-const brackitLoom = 'https://www.loom.com/share/06a2cdcebfc74d2da1aa0d704d4786f3'
-const hikesLoom = 'https://www.loom.com/share/7adaebfc1a7742459eca2bf8706b68f5'
-const hikesSkills = ['Ruby', 'Ruby on Rails', 'Javascript', 'ReactJS', 'AntDesign', 'Postgres']
-const brackItSkills =['Ruby', 'Ruby on Rails', 'Javascript', 'ReactJS', 'Redux', 'Postgres', 'Bootstrap', 'TDD','Enzyme', 'Rpec']
+const projects = [{
+    title: 'BrackIt',
+    description: 'Tournament Bracket Generator built to help tournament hosts create and manage matchups, record scores and advance teams, while participants can follow along.',
+    image: brackIt,
+    logo: brackItLogo,
+    frontend: 'https://github.com/lmonty22/brackIt-front-end',
+    backend: 'https://github.com/lmonty22/brackIt-backend',
+    loom: 'https://www.loom.com/embed/06a2cdcebfc74d2da1aa0d704d4786f3',
+    skills: ['Ruby', 'Ruby on Rails', 'Javascript', 'ReactJS', 'Redux', 'Postgres', 'Bootstrap', 'TDD','Enzyme', 'Rpec'],
+    link: 'https://brackit.netlify.app/'
+    },
+    {
+    title: 'getTrails',
+    description: 'Get out and enjoy the outdoors! Search for Trails, keep track of trails you want to hike or have already hiked. Comment on trails and leave a rating.',
+    image: getTrails,
+    logo: getTrailsLogo,
+    frontend: 'https://github.com/marykang09/hikes_frontend',
+    backend: 'https://github.com/marykang09/hikes_backend',
+    loom: 'https://www.loom.com/embed/7adaebfc1a7742459eca2bf8706b68f5',
+    skills: ['Ruby', 'Ruby on Rails', 'Javascript', 'ReactJS', 'AntDesign', 'Postgres'],
+    link: 'https://get-trails.netlify.app/'
+}]
 
-
-const ProjectsContainer = () => {
+const ProjectsContainer = (props) => {
     return(
-        <Fade>
-        <Container id='projects' fluid className='projects-container '>
+        <Slide>
+        <Container id='projects' style={{minHeight: props.height(window)}} fluid className='projects-container '>
             <h1 >Technical Projects</h1>
             <Row className='project-row'> 
-                <Project title={'BrackIt'} skills={brackItSkills} image={brackIt} description={bracktItDescription} link={'https://brackit.netlify.app/'} frontend={brackitFrontend} backend={brackitBackend} loom={brackitLoom}/>
-                <Project title={'getTrails'} skills={hikesSkills} image={getTrails} description={getTrailsDescription} link={'https://get-trails.netlify.app/'} frontend={hikesFrontend} backend={hikesBackend} loom={hikesLoom}/>
+                {projects.map(p => <Project project={p}/>)}
             </Row>
         </Container>
-        </Fade>
+        </Slide>
 
     )
 }

@@ -12,8 +12,7 @@ class NavBar extends Component{
 render(){
     const { activeItem } = this.state
     return(
-<Sticky >
- <Menu className='menu center navbar' >
+ <Menu className='menu navbar' >
     <Link to='/#home'> 
          <Menu.Item name='Home' 
          active={activeItem === 'Home'}
@@ -35,12 +34,11 @@ render(){
         onClick={this.handleItemClick}/>
     </Link>
     <Link to='/#contact'>
-        <Menu.Item name='Contact Me'
-        active={activeItem === 'Contact Me'}
+        <Menu.Item name='Contact Lindsay'
+        active={activeItem === 'Contact Lindsay'}
         onClick={this.handleItemClick}/>
     </Link>
 </Menu>
-</Sticky>
 )}
 }
 

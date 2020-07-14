@@ -8,7 +8,7 @@ const Footer = () => (
     <a target="_blank" href='https://www.linkedin.com/in/lindsaymontgomery1/'><img src={linkedin} className='icon'></img></a>
     <a target='_blank' href='https://github.com/lmonty22' ><img src={github} className='icon'></img> </a>
     <a target='_blank' href='https://medium.com/@lmonty22'><img src={medium} className='icon'></img> </a>
-
+    <a target='_blank' href='https://medium.com/@lmonty22'>Report an issue</a>
     </div>
 )
 

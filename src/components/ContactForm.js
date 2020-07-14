@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import {Form } from 'semantic-ui-react'
+import {Form} from 'semantic-ui-react'
 
 class ContactForm extends Component{
     state = {
         name: '',
         email: '',
-        message: ''
+        message: '',
+        error: ''
     }
 
     onChange = (e) => {
@@ -13,10 +14,20 @@ class ContactForm extends Component{
             [e.target.name]: e.target.value
         })
     }
+    error = () => {
+        this.setState({
+            ...this.state,
+            error:'I want to know everything! Please fill out all the fields below.'
+            })
+    }
 
     onSubmit = (e) => {
         e.preventDefault()
-        this.sendEmail(this.state)
+        if (this.state.name.length > 0 && this.state.email.length > 0 && this.state.message.length > 0){
+            this.sendEmail(this.state)
+        }else {
+            this.error()
+        }
     }
 
     sendEmail = (variables) => {
@@ -26,7 +37,8 @@ class ContactForm extends Component{
                     this.setState({
                         name: '',
                         email: '',
-                        message: ''
+                        message: '',
+                        error: ''
                     })
             })
             // Handle errors 
@@ -36,13 +48,14 @@ class ContactForm extends Component{
 
     render(){
         return(
-            <div id='contact' class='contact-Form'>
-                <h1>Contact me!</h1>
+            <div id='contact' style={{height: this.props.height(window)}} class='contact-Form'>
+                <h1>Lets Build Something!</h1>
                 <Form>
-                    <Form.Input name='name' label='Name' placeholder='Your Name' onChange={this.onChange} value={this.state.name} />
-                    <Form.Input name='email' label='Email' placeholder='Your Email' onChange={this.onChange} value={this.state.email}/>
-                    <Form.TextArea name='message' label='Message' placeholder='Your Message' onChange={this.onChange} value={this.state.message}/>
-                    <Form.Button onClick={this.onSubmit}>Send</Form.Button>
+                      {this.state.error.length > 0 ? <div>{this.state.error}</div>: null }
+                    <Form.Input name='name' label='Name' placeholder='Name' onChange={this.onChange} value={this.state.name} />
+                    <Form.Input name='email' label='Email' placeholder='Email' onChange={this.onChange} value={this.state.email}/>
+                    <Form.TextArea name='message' label='Message' placeholder='Message' onChange={this.onChange} value={this.state.message}/>
+                    <Form.Button onClick={this.onSubmit}>Send Email</Form.Button>
                 </Form>
             </div>
         )
