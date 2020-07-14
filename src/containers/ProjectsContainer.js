@@ -15,7 +15,7 @@ const projects = [{
     frontend: 'https://github.com/lmonty22/brackIt-front-end',
     backend: 'https://github.com/lmonty22/brackIt-backend',
     loom: 'https://www.loom.com/embed/06a2cdcebfc74d2da1aa0d704d4786f3',
-    skills: ['Ruby', 'Ruby on Rails', 'Javascript', 'ReactJS', 'Redux', 'Postgres', 'Bootstrap', 'TDD','Enzyme', 'Rpec'],
+    skills: ['Ruby on Rails', 'Javascript', 'ReactJS', 'Redux', 'Postgres', 'Bootstrap','Enzyme', 'Rspec'],
     link: 'https://brackit.netlify.app/'
     },
     {
@@ -26,7 +26,7 @@ const projects = [{
     frontend: 'https://github.com/marykang09/hikes_frontend',
     backend: 'https://github.com/marykang09/hikes_backend',
     loom: 'https://www.loom.com/embed/7adaebfc1a7742459eca2bf8706b68f5',
-    skills: ['Ruby', 'Ruby on Rails', 'Javascript', 'ReactJS', 'AntDesign', 'Postgres'],
+    skills: ['Ruby on Rails', 'Javascript', 'ReactJS', 'AntDesign', 'Postgres'],
     link: 'https://get-trails.netlify.app/'
 }]
 

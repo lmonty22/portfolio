@@ -5,7 +5,7 @@ import { Card} from 'react-bootstrap'
 
 const Blog = (props) => {
     return(
-        <a  target="_blank" href={props.blog.link}>
+        <a  target="_blank" rel="noopener noreferrer" href={props.blog.link}>
         <Card hoverable className='blog-card' >
              <Card.Img variant="top" className='card-image blog-image' src={props.blog.image} />
         <Card.Body>

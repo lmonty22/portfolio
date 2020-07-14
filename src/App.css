@@ -1,4 +1,3 @@
-
 .app, #root{
   display: flex;
   flex-direction: column;
@@ -18,8 +17,7 @@
    z-index: 100;
   }
 
- 
-  
+
   .splash{
     min-width: 100% !important;
     height: 100% !important;
@@ -33,32 +31,21 @@
     min-width: 100% !important;
   }
 
-  /* .pool-image {
-    width: 100% !important;
-    object-fit: cover;
-  } */
         
-  .name-header{
-    position: absolute;
-    z-index: 100;
-    margin: auto;
-    font-family: 'Parisienne', cursive;
-    color: #F1F2EC;
-    font-size: calc(40px + 2vmin);
-  }
-
-  
-.about-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+.name-header{
+  position: absolute;
+  z-index: 100;
+  margin: auto;
+  font-family: 'Parisienne', cursive;
+  color: #F1F2EC;
+  font-size: calc(40px + 2vmin);
 }
 
-.about {
+.about-container{
   display: flex;
-  color: #213A5E;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .headshot{
@@ -67,11 +54,21 @@
   
 }
 
-.about-row{
+.about-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: .5%
+}
+
+.about-icons{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  padding: 1%;
 }
 
 .bio {
@@ -174,8 +171,13 @@
 .footer{
   padding-top: 5%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.icon-div {
+  display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .icon{
@@ -218,4 +220,14 @@ p, h1, h2, h3, h4, div {
 
 .btn-light {
   background-color: #F1F2EC !important;
+}
+
+.skills{
+  font-size: 12pt;
+  padding: 1%
+}
+
+.badge-light {
+  background-color: #FDE2D8 !important;
+  color: #213A5E !important;
 }

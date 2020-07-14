@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Image}  from 'react-bootstrap'
+import { Image}  from 'react-bootstrap'
 import { Fade } from "react-awesome-reveal";
 // import PhotoCarousel from '../components/PhotoCarousel'
 import pool from '../assets/pool.jpg'

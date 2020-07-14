@@ -49,13 +49,13 @@ class ContactForm extends Component{
     render(){
         return(
             <div id='contact' style={{height: this.props.height(window)}} class='contact-Form'>
-                <h1>Lets Build Something!</h1>
+                <h1>Lets Build Something Together!</h1>
                 <Form>
                       {this.state.error.length > 0 ? <div>{this.state.error}</div>: null }
                     <Form.Input name='name' label='Name' placeholder='Name' onChange={this.onChange} value={this.state.name} />
                     <Form.Input name='email' label='Email' placeholder='Email' onChange={this.onChange} value={this.state.email}/>
                     <Form.TextArea name='message' label='Message' placeholder='Message' onChange={this.onChange} value={this.state.message}/>
-                    <Form.Button onClick={this.onSubmit}>Send Email</Form.Button>
+                    <Form.Button  onClick={this.onSubmit}>Send Email</Form.Button>
                 </Form>
             </div>
         )

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Sticky } from 'semantic-ui-react'
+import { Menu} from 'semantic-ui-react'
 import { HashLink as Link } from 'react-router-hash-link';
 
 class NavBar extends Component{
