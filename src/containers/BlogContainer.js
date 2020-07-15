@@ -16,7 +16,7 @@ const Blogs = [{
 },
 {   title: 'Intro to React Developer Tools',
     link: 'https://medium.com/@lmonty22/intro-to-react-developer-tools-9f77856b64ec',
-    date: 'May 13, 3030',
+    date: 'May 13, 2020',
     image: 'https://miro.medium.com/max/1400/1*RBsXvMIsLm9M6fRDHzfr3w.png'
 }
 

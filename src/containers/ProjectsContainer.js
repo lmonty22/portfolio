@@ -20,7 +20,7 @@ const projects = [{
     },
     {
     title: 'getTrails',
-    description: 'Get out and enjoy the outdoors! Search for Trails, keep track of trails you want to hike or have already hiked. Comment on trails and leave a rating.',
+    description: 'Get out and enjoy the outdoors! Search for trails, keep track of trails you want to hike or have already hiked. Comment on trails and leave a rating.',
     image: getTrails,
     logo: getTrailsLogo,
     frontend: 'https://github.com/marykang09/hikes_frontend',
