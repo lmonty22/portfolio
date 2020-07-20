@@ -4,6 +4,12 @@ import Blog from '../components/Blog'
 import { Slide } from "react-awesome-reveal";
 
 const Blogs = [{
+    title: 'Shell Scripting made Simple',
+    link: 'https://medium.com/@lmonty22/shell-scripting-made-simple-efe6f6b69043',
+    date: 'July 20, 2020',
+    image: 'https://miro.medium.com/max/1400/1*N201ChnesHowJ32m1Vrolw.jpeg'
+    },  
+    {
     title: 'Big O Notation & Avoiding Nested Loops',
     link: 'https://medium.com/@lmonty22/big-o-notation-avoiding-nested-loops-2924f3002a08',
     date: 'July 10, 2020',
@@ -13,13 +19,7 @@ const Blogs = [{
     link: 'https://medium.com/@lmonty22/finding-my-new-identity-through-flatiron-%EF%B8%8F-7d5659267c2d',
     date: 'June 3, 2020',
     image: 'https://miro.medium.com/max/1242/1*-xtv0ezquErkY5HNMBHouA.jpeg'
-},
-{   title: 'Intro to React Developer Tools',
-    link: 'https://medium.com/@lmonty22/intro-to-react-developer-tools-9f77856b64ec',
-    date: 'May 13, 2020',
-    image: 'https://miro.medium.com/max/1400/1*RBsXvMIsLm9M6fRDHzfr3w.png'
 }
-
 ]
 
 const BlogContainer = (props) => {
