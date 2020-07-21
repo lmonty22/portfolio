@@ -49,8 +49,8 @@
 }
 
 .headshot{
-  max-height: 50%;
-  max-width: 50%;
+  max-height: 45%;
+  max-width: 45%;
   
 }
 
@@ -60,7 +60,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: .5%
+  max-width: 600px;
+  padding: .1%;
 }
 
 .about-icons{
@@ -72,7 +73,7 @@
 }
 
 .bio {
-  padding: 2%;
+  padding: 3%;
 }
 
 .left-col, .right-col{
