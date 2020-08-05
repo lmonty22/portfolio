@@ -6,7 +6,7 @@ import { Slide } from "react-awesome-reveal";
 const Blogs = [
     {   title: 'JavaScript Basics & Theory',
         link: 'https://medium.com/@lmonty22/javascript-basics-theory-28f2696a00d1',
-        date: 'August, 4, 202xs0',
+        date: 'August, 4, 2020',
         image: 'https://miro.medium.com/max/1400/1*2LCM6SQcbNr1O1KnXV97uQ.png'
     },
     {   title: 'Hooked on Hooks',
